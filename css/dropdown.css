@@ -1,0 +1,159 @@
+.dropdown {
+  width: 15em;
+  margin: 0 auto 1em;
+}
+.dropdown dt a {
+  display: block;
+  height: 2.5em;
+  width: 15em;
+  border: 1px solid #7c979c;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.dropdown dt a:hover, .dropdown dt a:active {
+  border-color: #bdc3c7;
+  width: 15em;
+}
+.dropdown dt span {
+  display: block;
+  width: 15em;
+  padding: 0 1em;
+  line-height: 2.5em;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAYAAACALL/6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHo+AACAQQAA+MoAAIC0AAB48QAA9RwAADw3AAAbzhlfIT4AAACJSURBVHjajNAxCsJAEEbhb5cU4i0sbHIaL6IQTxFPo4VeROwXQs4gKW1cWJZEM90wj5l5f0jDeMXBunqENIw7vLD9A09oIxL6FdsvSCENI2zwxH4BTmgxxeJc92P76cuIpRBuc6K45yZWwzPeleixBOLMr30tWgJZuqwcQJNFy2GzkHeHUMPwGQChFSPmzlJ1WgAAAABJRU5ErkJggg==) no-repeat scroll right center;
+  border-right: 1em solid transparent;
+  cursor: pointer;
+}
+.dropdown dd {
+  width: 15em;
+  position: relative;
+}
+.dropdown dd ul {
+  display: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 7.6em;
+  position: absolute;
+  scrollbar-arrow-color: white;
+  left: 0;
+  top: -2.5em;
+  width: 15em;
+  list-style: none;
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #a8babd;
+  border-radius: 3px;
+  margin-left: -2.51em;
+}
+.dropdown dd ul::-webkit-scrollbar {
+  width: 2px;
+}
+
+.dropdown dd ul li:first-child:hover {
+  border-radius: 3px 3px 0 0;
+  width: 14.94em;
+  margin-left: -2.49em;
+}
+.dropdown dd ul li:first-child a:hover {
+  border-radius: 3px 3px 0 0;
+  width: 14.94em;
+  margin-left: -0.02em;
+}
+.dropdown dd ul li:first-child a {
+  margin-left: -2.49em;
+}
+.dropdown dd ul li:last-child a:hover {
+  border-radius: 0 0 3px 3px;
+  width: 14.94em;
+}
+.dropdown dd li a {
+  display: block;
+  padding: 0 1em;
+  line-height: 2.5em;
+  text-decoration: none;
+  width: 15em;
+  margin-left: -2.53em;
+}
+.dropdown dd li a:hover {
+  background-color: #2ecc71;
+  color: #fff;
+  cursor: pointer;
+  width: 14.945em;
+  margin-left: -2.53em;
+}
+
+.language-select > .dropdown {
+  width: 8em;
+  margin: 0 auto 1em;
+}
+.language-select > .dropdown dt a {
+  display: block;
+  height: 2.5em;
+  width: 8em;
+  border: 1px solid #7c979c;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.language-select > .dropdown dt a:hover, .language-select > .dropdown dt a:active {
+  border-color: #bdc3c7;
+  width: 8em;
+}
+.language-select > .dropdown dt span {
+  display: block;
+  width: 8em;
+  padding: 0 1em;
+  line-height: 2.5em;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAYAAACALL/6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHo+AACAQQAA+MoAAIC0AAB48QAA9RwAADw3AAAbzhlfIT4AAACJSURBVHjajNAxCsJAEEbhb5cU4i0sbHIaL6IQTxFPo4VeROwXQs4gKW1cWJZEM90wj5l5f0jDeMXBunqENIw7vLD9A09oIxL6FdsvSCENI2zwxH4BTmgxxeJc92P76cuIpRBuc6K45yZWwzPeleixBOLMr30tWgJZuqwcQJNFy2GzkHeHUMPwGQChFSPmzlJ1WgAAAABJRU5ErkJggg==) no-repeat scroll right center;
+  border-right: 1em solid transparent;
+  cursor: pointer;
+}
+.language-select > .dropdown dd {
+  width: 8em;
+  position: relative;
+}
+.language-select > .dropdown dd ul {
+  overflow-y: hidden;
+  position: absolute;
+  scrollbar-arrow-color: white;
+  height: 5em;
+  left: 0;
+  top: -2.5em;
+  width: 8em;
+  list-style: none;
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #a8babd;
+  border-radius: 3px;
+  margin-left: -2.51em;
+}
+
+.language-select > .dropdown dd ul li:first-child:hover {
+  border-radius: 3px 3px 0 0;
+  width: 8em;
+  margin-left: -2.49em;
+}
+.language-select > .dropdown dd ul li:first-child a:hover {
+  border-radius: 3px 3px 0 0;
+  width: 8em;
+  margin-left: -0.02em;
+}
+.language-select > .dropdown dd ul li:first-child a {
+  margin-left: -2.49em;
+}
+.language-select > .dropdown dd ul li:last-child a:hover {
+  border-radius: 0 0 3px 3px;
+  width: 8em;
+}
+.language-select > .dropdown dd li a {
+  display: block;
+  padding: 0 1em;
+  line-height: 2.5em;
+  text-decoration: none;
+  width: 8em;
+  margin-left: -2.53em;
+}
+.language-select > .dropdown dd li a:hover {
+  background-color: #2ecc71;
+  color: #fff;
+  cursor: pointer;
+  width: 8em;
+  margin-left: -2.53em;
+}
+
