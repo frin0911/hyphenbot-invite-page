@@ -48,5 +48,5 @@ function select(element) {
 }
 
 function goto(lang) {
-    location.href = "../" + lang + "/index.html";
+    location.href = "../" + lang + "/";
 }
