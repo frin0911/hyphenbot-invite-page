@@ -17,7 +17,7 @@ function agree() {
         let element = document.getElementById("btn");
         element.className = "button_base btn_slide_in";
         const id = dropdown[0].getAttribute('id');
-        const url = "https://discord.com/oauth2/authorize?client_id=" + id + "&permissions=1342499926&scope=bot";
+        const url = "https://discord.com/oauth2/authorize?client_id=" + id + "&permissions=1342499926&redirect_url=https://invite.cpbu.xyz/success&scope=bot";
         wrapLink(element, url);
     } else {
         let element = document.getElementById("btn");
