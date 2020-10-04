@@ -21,7 +21,7 @@ function agree() {
         let element = document.getElementById("btn");
         element.className = "button_base btn_slide_in";
         id = dropdown[0].getAttribute('id');
-        wrapLink(element, "permissions.html?lang=" + language + "&bot=" + id);
+        wrapLink(element, "permissions?lang=" + language + "&bot=" + id);
     } else {
         let element = document.getElementById("btn");
         element.className = "button_base btn_disabled";
