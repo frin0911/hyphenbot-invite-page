@@ -1,3 +1,6 @@
+// Default
+let id = '621013224610988042';
+
 function agree() {
     const checkbox = document.getElementsByName('agree');
     const dropdown = document.getElementsByClassName('check');
@@ -12,18 +15,27 @@ function agree() {
         chk2 = true;
     }
     chk_drop = dropdown.length === 1;
+    let language = determineLanguage();
 
     if (chk1 && chk2 && chk_drop) {
         let element = document.getElementById("btn");
         element.className = "button_base btn_slide_in";
-        const id = dropdown[0].getAttribute('id');
-        const url = "https://discord.com/oauth2/authorize?client_id=" + id + "&scope=bot&permissions=1342499926&response_type=code&redirect_uri=https://invite.cpbu.xyz/success";
-        wrapLink(element, url);
+        id = dropdown[0].getAttribute('id');
+        wrapLink(element, "permissions.html?lang=" + language + "&bot=" + id);
     } else {
         let element = document.getElementById("btn");
         element.className = "button_base btn_disabled";
         wrapLink(element, "javascript:void(0)");
     }
+}
+
+function determineLanguage() {
+    const element = document.getElementById("language");
+    let alt = element.getAttribute('alt');
+    let language = null;
+    if (alt === "View in English") language = "ko";
+    else language = "en";
+    return language;
 }
 
 function wrapLink(element, content) {
@@ -38,15 +50,34 @@ function select(element) {
     const elements = document.getElementsByClassName("check");
     for (let i = 0; i < elements.length; i++) {
         elements[i].className = "uncheck";
-        console.log("unchecked");
     }
     if (element != null) {
-        console.log("checked");
         element.className = "check";
     }
     agree();
 }
 
-function goto(lang) {
-    location.href = "../" + lang;
+function getLanguage() {
+    let language = navigator.language || navigator.userLanguage;
+    if (language === "ko") language = "ko";
+    else language = "en";
+    setLanguage(language);
+}
+
+function setLanguage(currentLanguage) {
+    const element = document.getElementById("language");
+    if (currentLanguage === "en") {
+        element.setAttribute('src', 'img/ko.png');
+        element.setAttribute('onclick', "setLanguage('ko');");
+        element.setAttribute('alt', "한국어로 보기");
+    }
+    if (currentLanguage === "ko") {
+        element.setAttribute('src', 'img/us.png');
+        element.setAttribute('onclick', "setLanguage('en');");
+        element.setAttribute('alt', "View in English");
+    }
+    $('[data-langNum]').each(function() {
+        const $this = $(this);
+        $this.html($.lang[currentLanguage][$this.data('langnum')]);
+    });
 }
