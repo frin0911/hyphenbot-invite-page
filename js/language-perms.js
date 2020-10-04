@@ -105,7 +105,7 @@ function getUrlParams() {
 function getURL() {
     let params = getUrlParams();
     location.href = "https://discord.com/oauth2/authorize?client_id=" + params['bot'] + "&scope=bot&permissions=" + permission +
-        "&response_type=code&redirect_uri=https://invite.cpbu.xyz/success?lang=" + params['lang'];
+        "&response_type=code&redirect_uri=https://invite.cpbu.xyz/success";
 }
 
 function add(element) {
