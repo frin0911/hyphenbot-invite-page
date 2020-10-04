@@ -18,9 +18,9 @@ function changeElement(currentLanguage) {
     });
 }
 
-function getUrlParams() {
-    const params = {};
-    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,
-        function(str, key, value) { params[key] = value; });
-    changeElement(params['lang']);
+function getLanguage() {
+    let language = navigator.language || navigator.userLanguage;
+    if (language === "ko") language = "ko";
+    else language = "en";
+    changeElement(language);
 }
