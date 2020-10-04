@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title data-langNum="title">권한 | Hyphen-Bot</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/language-perms.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/permission.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/button.css">
+    <script>
+        $(document).ready(function () {
+            inheritLanguage();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h3><a href="https://ko.hyphenbot.com">Hyphen-Bot</a></h3>
+    </header>
+    <div class="permissions">
+        <p style="color: blue;" data-langNum="0">파란색: 봇이 작동하는데 필요한 <b>필수 권한</b></p>
+        <p style="color: green;" data-langNum="1">초록색: 봇을 더 편리하게 이용할 수 있는 <b>추천 권한</b></p>
+        <div class="column1">
+            <p data-langNum="2">일반 권한</p>
+            <input class="inp-cbx" id="8" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="8"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="3">관리자</span></label><br>
+            <input class="inp-cbx" id="128" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="128"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="4">감사 로그 보기</span></label><br>
+            <input class="inp-cbx" id="524288" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="524288"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="5">서버 인사이트 보기</span></label><br>
+            <input class="inp-cbx" id="32" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="32"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="6">서버 관리하기</span></label><br>
+            <input class="inp-cbx" id="268435456" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="268435456"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="7">역할 관리하기</span></label><br>
+            <input class="inp-cbx" id="16" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="16"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="8">채널 관리하기</span></label><br>
+            <input class="inp-cbx" id="2" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="2"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="9">멤버 추방하기</span></label><br>
+            <input class="inp-cbx" id="4" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="4"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="10">멤버 차단하기</span></label><br>
+            <input class="inp-cbx" id="1" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="1"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="11">초대 코드 만들기</span></label><br>
+            <input class="inp-cbx" id="67108864" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="67108864"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="12">별명 변경하기</span></label><br>
+            <input class="inp-cbx" id="134217728" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="134217728"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="13">별명 관리하기</span></label><br>
+            <input class="inp-cbx" id="1073741824" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="1073741824"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="14">이모티콘 관리</span></label><br>
+            <input class="inp-cbx" id="536870912" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="536870912"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="15">웹후크 관리하기</span></label><br>
+            <input class="inp-cbx" id="1024" type="checkbox" name="agree" checked="checked" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="1024"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span class="mandatory" data-langNum="16">채팅 채널 읽기 및 음성채널 보기</span></label><br>
+        </div>
+        <div class="column2">
+            <p data-langNum="17">채팅 권한</p>
+            <input class="inp-cbx" id="2048" type="checkbox" name="agree" onclick="add(this);" checked="checked" style="display: none"/>
+            <label class="cbx" for="2048"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span class="mandatory" data-langNum="18">메시지 보내기</span></label><br>
+            <input class="inp-cbx" id="4096" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="4096"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="19">TTS 메시지 보내기</span></label><br>
+            <input class="inp-cbx" id="8192" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="8192"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span class="recommend" data-langNum="20">메시지 관리</span></label><br>
+            <input class="inp-cbx" id="16384" type="checkbox" name="agree" checked="checked" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="16384"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span class="mandatory" data-langNum="21">링크 첨부</span></label><br>
+            <input class="inp-cbx" id="32768" type="checkbox" name="agree" checked="checked" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="32768"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span class="mandatory" data-langNum="22">파일 첨부</span></label><br>
+            <input class="inp-cbx" id="65536" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="65536"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="23">메시지 기록 보기</span></label><br>
+            <input class="inp-cbx" id="131072" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="131072"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="24">모든 역할 멘션하기</span></label><br>
+            <input class="inp-cbx" id="262144" type="checkbox" name="agree" checked="checked" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="262144"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span class="mandatory" data-langNum="25">외부 이모티콘 사용하기</span></label><br>
+            <input class="inp-cbx" id="64" type="checkbox" name="agree" checked="checked" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="64"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span class="mandatory" data-langNum="26">반응 추가하기</span></label><br>
+        </div>
+        <div class="column3">
+            <p data-langNum="27">음성 권한</p>
+            <input class="inp-cbx" id="1048576" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="1048576"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="28">연결</span></label><br>
+            <input class="inp-cbx" id="2097152" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="2097152"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="29">말하기</span></label><br>
+            <input class="inp-cbx" id="512" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="512"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="30">동영상</span></label><br>
+            <input class="inp-cbx" id="4194304" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="4194304"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="31">멤버들의 마이크 음소거하기</span></label><br>
+            <input class="inp-cbx" id="8388608" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="8388608"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="32">멤버들의 헤드셋 음소거하기</span></label><br>
+            <input class="inp-cbx" id="16777216" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="16777216"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="33">멤버 이동</span></label><br>
+            <input class="inp-cbx" id="33554432" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="33554432"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="34">음성 감지 사용</span></label><br>
+            <input class="inp-cbx" id="256" type="checkbox" name="agree" onclick="add(this);" style="display: none"/>
+            <label class="cbx" for="256"><span>
+                        <svg width="12px" height="10px">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg></span><span data-langNum="35">우선 발언권</span></label><br>
+        </div>
+    </div>
+    <hr style="visibility: hidden">
+    <div class="button">
+        <a class="button-hori" onclick="getURL()" target="_blank"><span class="text"  data-langNum="36">초대하기</span></a>
+    </div>
+
+</body>
+</html>
